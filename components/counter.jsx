@@ -10,10 +10,16 @@ export class Counter extends Component {
    this.setState({value:this.state.value +1})
  }
     
+ handleReset = ()=>{
+     const counters = this.state.counters.map(c=>{
+         c.value = 0;
+         return c;
+     });
+     this.setState({counters})
+ }
     render() {
     
         return (
-           
             <div>
                 
          <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
