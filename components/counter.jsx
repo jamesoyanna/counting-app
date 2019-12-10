@@ -20,6 +20,9 @@ export class Counter extends Component {
                 <button 
                 onClick={this.handleIncrement} 
                 className="btn btn-secondary btn-sm">Incremental</button>
+                <button 
+                onClick={()=>this.props.onDelete(this.props.id)} 
+                className="btn btn-danger btn-sm m-2">Delete</button>
                
             </div>
         );
